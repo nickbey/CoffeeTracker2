@@ -22,6 +22,7 @@
         />
 
     <RelativeLayout
+        android:id="@+id/profileLayout"
         android:layout_width="200dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,12 +30,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/colorPrimary"
-        android:visibility="invisible"
         >
 
-
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/idTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -42,7 +41,7 @@
             android:textSize="20sp"
             android:text="User1" />
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/nameEditview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -50,11 +49,12 @@
             android:layout_marginTop="60dp"
             android:textAlignment="center"
             android:ems="10"
+            android:textColorHint="#aaa"
             android:inputType="textPersonName"
             android:hint="Input a name!"/>
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/editText3"
+            android:id="@+id/emailEditview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -62,10 +62,11 @@
             android:ems="10"
             android:textAlignment="center"
             android:inputType="textEmailAddress"
+            android:textColorHint="#aaa"
             android:hint="Input a email!" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/profileSaveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
@@ -76,27 +77,33 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/coffeeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/colorPrimary"
+        android:visibility="invisible"
         >
 
         <ScrollView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:id="@+id/coffeesScrollview"
             >
-            <TextView
-                android:id="@+id/coffeesTextView"
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:id="@+id/coffeeListLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="70dp"
-                android:textSize="20sp"
-                android:text="User1asdfasdfasdfasdf\nadsfasf'nafa'nafaf\nafadf\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\n" />
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                >
+
+            </LinearLayout>
         </ScrollView>
 
         <android.support.v7.widget.AppCompatButton
@@ -104,11 +111,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
-            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
             android:backgroundTint="@color/colorPrimary"
             />
-
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/coffeeRemoveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:layout_below="@+id/coffeeSaveButton"
+            android:layout_alignLeft="@+id/coffeeSaveButton"
+            android:backgroundTint="@color/colorPrimary"
+            />
 
     </RelativeLayout>
 
