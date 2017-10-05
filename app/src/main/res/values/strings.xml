@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CoffeeTracker</string>
+    <string name="profile">Profile</string>
+    <string name="coffees">Coffees</string>
 </resources>
