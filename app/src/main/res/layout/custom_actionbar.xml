@@ -13,6 +13,8 @@
         android:id="@+id/spinner"
         android:layout_width="150dp"
         android:layout_height="40dp"
+        android:popupBackground="#cde2f2"
+        android:entries="@array/snipperItems"
         />
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/profileButton"
